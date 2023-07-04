@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Linear Layout with vertical orientation and other properties -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http:// schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http:// schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/material_dynamic_neutral20"
+    tools:context=".RegistrationActivity">
+
+    <!-- TextView for heading -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="114dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logoxl" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:layout_marginBottom="40dp"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        />
+
+    <!-- Edit text for email -->
+    <EditText
+        android:id="@+id/email"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/email"
+        android:drawableTint="@color/white"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Email"
+        android:textColorHint="@color/white"
+        />
+
+    <!-- Edit text for password -->
+    <EditText
+        android:id="@+id/passwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/white"
+        android:hint="Enter your Password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="textPassword" />
+
+
+    <!-- Button for register with text "Register" -->
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Register"
+        android:backgroundTint="#FF3B00"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btntologin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign in here!"
+        android:backgroundTint="#FF3B00"
+        android:textColor="@color/white" />
+
+    <!-- ProgressBar for loading time -->
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

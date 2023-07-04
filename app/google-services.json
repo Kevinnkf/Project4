@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "296676071150",
+    "firebase_url": "https://ccitpro-40cf1-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ccitpro-40cf1",
+    "storage_bucket": "ccitpro-40cf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296676071150:android:05efaa52ef3bc065f785ff",
+        "android_client_info": {
+          "package_name": "com.example.cobalogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296676071150-4nve61rcql3flgtl6vte0o3cp2jn8g9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNByHRK-7EKZ284-RS00SnlsxzZzlvajs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296676071150-4nve61rcql3flgtl6vte0o3cp2jn8g9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
