@@ -42,15 +42,17 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-                        setFragment(homeFragment);
+                        Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(homeIntent);
                         return true;
                     case R.id.action_list:
-                        clearBackStack();
-                        setFragment(listFragment);
+                        Intent ListIntent = new Intent(MainActivity.this, ListActivity.class);
+                        startActivity(ListIntent);
                         return true;
                     case R.id.action_profile:
-                        clearBackStack();
-                        setFragment(profileFragment);
+                        Intent profileIntent = new Intent(MainActivity.this, ProfileActivity.class);
+                        startActivity(profileIntent);
+                        finish(); // Optional: finish the current activity if you don't want it to remain in the back stack
                         return true;
                 }
                 return false;

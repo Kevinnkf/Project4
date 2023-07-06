@@ -46,7 +46,11 @@ public class ListActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("ticket");
+
+
         dialog.show();
+
+
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
