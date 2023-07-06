@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private listFragment listFragment;
     private profileFragment profileFragment;
+    private HomeFragment homeFragment;
 
 
     @Override
@@ -32,28 +33,23 @@ public class MainActivity extends AppCompatActivity {
 
         listFragment = new listFragment();
         profileFragment = new profileFragment();
+        homeFragment = new HomeFragment();
 
         botNav = findViewById(R.id.bot_nav);
-        btn = findViewById(R.id.btnToList);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), List.class);
-                startActivity(intent);
-            }
-        });
 
         botNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_home:
-
+                        setFragment(homeFragment);
                         return true;
                     case R.id.action_list:
+                        clearBackStack();
                         setFragment(listFragment);
                         return true;
                     case R.id.action_profile:
+                        clearBackStack();
                         setFragment(profileFragment);
                         return true;
                 }
@@ -61,10 +57,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void setFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
+    private void clearBackStack() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
 }

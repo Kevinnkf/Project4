@@ -65,6 +65,12 @@ public class Login extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please fill in the password", Toast.LENGTH_SHORT).show();
             return;
         }
+        if(TextUtils.equals(email, "thediamondssword@gmail.com")){
+            Toast.makeText(getApplicationContext(), "welcome admin!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(Login.this, Register.class);
+            startActivity(intent);
+        }
+
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Toast.makeText(Login.this, "", Toast.LENGTH_SHORT).show();
